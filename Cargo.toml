@@ -1,0 +1,3 @@
+[workspace]
+
+members = ["body-control", "test-app"]
