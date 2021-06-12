@@ -19,6 +19,6 @@ systemctl set-default multi-user.target
 if id "$NVM_USER" &>/dev/null; then
   echo "-- $HOSTNAME: User already exists, skipping..."
 else
-  echo "-- $HOSTNAME: Creating user..."
+  echo "-- $HOSTNAME: Creating user $NVM_USER..."
   adduser "$NVM_USER"
 fi
