@@ -1,0 +1,9 @@
+
+
+struct GaitConfig {
+
+}
+
+struct GaitStep {
+    
+}

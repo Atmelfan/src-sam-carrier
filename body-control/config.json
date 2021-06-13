@@ -1,0 +1,134 @@
+{
+    
+    "cephalothorax": {
+        "leg_servos": {
+            "_comment": "Turnigy TGY-S901D",
+            "min_pulse": 403,
+            "max_pulse": 2016,
+            "factor": 513.3182
+        },
+        "eye_servos": {
+            "_comment": "Turnigy TGY-90S",
+            "min_pulse": 806,
+            "max_pulse": 1612,
+            "factor": 256.7199
+        },
+        "eyes": [
+            {
+                "name": "left",
+                "servos": [0, 0]
+            },
+            {
+                "name": "left",
+                "servos": [0, 0]
+            }
+        ],
+        "legs": [
+            {
+                "name": "L1",
+                "transform": {
+                    "translate": [0, 0, 0],
+                    "rotate": [0, 0, 0]
+                },
+                "servos": [0, 1, 2],
+                "offset": [0.18, 0, 0],
+                "ik": {
+                    "lengths": [29.0, 70.0, 132.0],
+                    "mirror": false
+                }
+            },
+            {
+                "name": "R1",
+                "transform": {
+                    "translate": [0, 0, 0],
+                    "rotate": [0, 0, 0]
+                },
+                "servos": [4, 5, 6],
+                "offset": [0, 0, 0],
+                "ik": {
+                    "lengths": [0,0,0],
+                    "mirror": true
+                }
+            },
+            {
+                "name": "L2",
+                "transform": {
+                    "translate": [0, 0, 0],
+                    "rotate": [0, 0, 0]
+                },
+                "servos": [8, 9, 10],
+                "offset": [0, 0, 0],
+                "ik": {
+                    "lengths": [0,0,0],
+                    "mirror": true
+                }
+            },
+            {
+                "name": "R2",
+                "transform": {
+                    "translate": [0, 0, 0],
+                    "rotate": [0, 0, 0]
+                },
+                "servos": [12, 13, 14],
+                "offset": [0, 0, 0],
+                "ik": {
+                    "lengths": [0,0,0],
+                    "mirror": true
+                }
+            },
+            {
+                "name": "L3",
+                "transform": {
+                    "translate": [0, 0, 0],
+                    "rotate": [0, 0, 0]
+                },
+                "servos": [16, 17, 18],
+                "offset": [0, 0, 0],
+                "ik": {
+                    "lengths": [0,0,0],
+                    "mirror": true
+                }
+            },
+            {
+                "name": "R3",
+                "transform": {
+                    "translate": [0, 0, 0],
+                    "rotate": [0, 0, 0]
+                },
+                "servos": [20, 21, 22],
+                "offset": [0, 0, 0],
+                "ik": {
+                    "lengths": [0,0,0],
+                    "mirror": true
+                }
+            },
+            {
+                "name": "L4",
+                "transform": {
+                    "translate": [0, 0, 0],
+                    "rotate": [0, 0, 0]
+                },
+                "servos": [24, 25, 26],
+                "offset": [0, 0, 0],
+                "ik": {
+                    "lengths": [0,0,0],
+                    "mirror": true
+                }
+            },
+            {
+                "name": "R4",
+                "transform": {
+                    "translate": [0, 0, 0],
+                    "rotate": [0, 0, 0]
+                },
+                "servos": [28, 29, 30],
+                "offset": [0, 0, 0],
+                "ik": {
+                    "lengths": [0,0,0],
+                    "mirror": true
+                }
+            }
+        ]
+    }
+    
+}
