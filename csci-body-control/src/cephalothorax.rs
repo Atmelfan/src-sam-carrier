@@ -12,7 +12,7 @@ pub struct LegIk {
 impl LegIk {
     /// Calculate an IK solution in leg-local space
     /// TODO: Boundry check
-    pub fn calculate(&self, t: na::Vector3<f32>) -> [f32; 3] {
+    pub fn calculate(&self, t: na::Point3<f32>) -> [f32; 3] {
         let (x, y, z) = (t[0], t[1], t[2]);
 
         let d_sq = x.powi(2) + y.powi(2);
@@ -27,7 +27,7 @@ impl LegIk {
         let inv = if self.mirror { -1.0 } else { 1.0 };
         [
             inv * f32::atan2(y, x),
-            inv * (f32::acos(s1) + f32::atan2(z, d)),
+            -inv * (f32::acos(s1) + f32::atan2(z, d)),
             inv * f32::acos(s2),
         ]
     }
@@ -46,7 +46,7 @@ pub struct Leg {
 
 impl Leg {
     /// Calculate ik solution with servo offsets
-    fn calculate_ik(&self, t: na::Vector3<f32>) -> [f32; 3] {
+    fn calculate_ik(&self, t: na::Point3<f32>) -> [f32; 3] {
         let mut c = self.ik.calculate(t);
         c.iter_mut()
             .enumerate()
@@ -55,9 +55,15 @@ impl Leg {
     }
 }
 
+fn default_transform() -> na::Transform3<f32> {
+    na::Transform3::identity()
+}
+
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Cephalothorax {
     pub leg_servos: Servo,
     pub eye_servos: Servo,
     pub legs: [Leg; 8],
+    #[serde(skip, default = "default_transform")]
+    body_transform: na::Transform3<f32>,
 }

@@ -1,9 +1,0 @@
-
-
-struct GaitConfig {
-
-}
-
-struct GaitStep {
-    
-}

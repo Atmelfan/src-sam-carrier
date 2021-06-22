@@ -1,5 +1,15 @@
 {
-    
+    "hardware": {
+        "bus": "/dev/i2c-1",
+        "pwm": {
+            "address": [
+                64,
+                65
+            ],
+            "prescaler": 30
+        }
+
+    },
     "cephalothorax": {
         "leg_servos": {
             "_comment": "Turnigy TGY-S901D",
@@ -31,10 +41,10 @@
                     "rotate": [0, 0, 0]
                 },
                 "servos": [0, 1, 2],
-                "offset": [0.18, 0, 0],
+                "offset": [0.18, 0, 1.57],
                 "ik": {
                     "lengths": [29.0, 70.0, 132.0],
-                    "mirror": false
+                    "mirror": true
                 }
             },
             {

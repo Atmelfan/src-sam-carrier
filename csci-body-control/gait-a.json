@@ -1,0 +1,17 @@
+{
+    "name": "Gait A",
+    "home": [
+        []
+    ],
+    "steps": [
+        {
+            "duty": 0.4,
+            "phase": 0.5
+        },
+        {
+            "dt": 0.1,
+            "support": [],
+            "swing": []
+        }
+    ]
+}
